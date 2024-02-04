@@ -1,0 +1,60 @@
+# Travel Booking System
+def find_cheapest_flight(destination,flexibility_days,budget,preffered_airlines,garuda_indonesia_prices,singapor_airlines_prices,flight_days,garuda_indonesia_range,singapor_airlines_range):
+    if destination == "Bali":
+        print("your dream destination bali is available")
+    elif destination != "Bali":
+        print("your dream destination is not available")
+        
+    if flexibility_days == 3:
+        print("your flexibility days are accepted")
+    elif flexibility_days > 3:
+        print("flexibility days can't accepted")
+    elif flexibility_days < 3:
+         print("flexibility days can't accepted")
+     
+    if budget <= 2000 or budget > 2000:
+        print("flight is available")
+            
+    if preffered_airlines == "garuda indonesia" or preffered_airlines =="singapor airlines":
+        if  garuda_indonesia_prices == 2000 and singapor_airlines_prices == 3000:
+                if budget >= garuda_indonesia_prices or budget >= singapor_airlines_prices:
+                    print("your favourite flight is available you can reserved seats")
+    else:
+        print("Sorry! you don't have budget for your favourite flight; chose other cheapest flight")
+     
+    for flight_days in range(1):   
+        for flight_days in garuda_indonesia_range or flight_days in singapor_airlines_range:
+            print("your favourite flight for these days is available")
+            break
+    if flight_days != garuda_indonesia_range and flight_days != singapor_airlines_range:
+        print("your favourite airlines range are not available for these days")
+     
+# another fuction        
+def  top_cheapest_flight(cheapest_airlines,prices,dates):
+    for flight_days in range(1):
+        for flight_days in dates:
+            print("cheapest airlines dates are available")
+            break
+    for preffered_airlines in range(1):
+        for preffered_airlines in cheapest_airlines:
+            print("cheapest airlines are available; but PIA is best,you can chose this one")
+            break
+    for budget in range(1):
+        for budget in prices:
+            print("you have budget for this cheapest flight you can reserverd seats")
+            break
+            
+destination = input(" Enter your dream destination:") 
+flexibility_days = int(input("Enter flexibility days:"))   
+budget =int(input("Enter your budget:"))
+preffered_airlines = input("Enter your preffered airlines:") 
+garuda_indonesia_prices = 2000
+singapor_airlines_prices = 3000
+flight_days = input("Enter your flight days:")
+garuda_indonesia_range =input("Enter your garuda airlines range:")
+singapor_airlines_range =input("Enter singapor airlines range:")
+cheapest_airlines= "PIA","dehli airlines","saudi airlines"
+prices = 1400,1300,1600
+dates = "1 to 30may","1 to 30june","1 to 30july"
+find_cheapest_flight(destination,flexibility_days,budget,preffered_airlines,garuda_indonesia_prices,singapor_airlines_prices,flight_days,garuda_indonesia_range,singapor_airlines_range)
+top_cheapest_flight(cheapest_airlines,prices,dates)
